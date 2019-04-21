@@ -1,0 +1,130 @@
+:root {
+	--gold: #ffda65;
+	--gold-dark: #a3862c;
+	--silver: #ADB5BD;
+	--silver-dark: #495057;
+	--bronze: #c99355;
+	--bronze-dark: #80582c;
+	--grey: #CED4DA;
+	--grey-dark: #868E96;
+
+	--row-background1: #F1F3F5;
+	--row-background2: #E9ECEF;
+}
+
+body {
+	/*The star animation takes 6(1+2+3) pixels. So added transparent color to counter it*/
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.home {
+	padding-left: 25vw;
+	height: 100vh;
+	overflow-y: auto;
+}
+
+.result {
+	position: relative; /*Remove this and see how it looks*/
+	margin-top: 10vh;
+	/*background-color: #00897b;*/
+	background-color: white;
+	width: 50vw;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4);
+	transition: 0.3s;
+	padding: 0px;
+}
+
+.result:hover {
+	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.8);
+}
+
+.page-header {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 40px;
+}
+
+.table {
+	margin-bottom: 0px;
+	overflow: visible;
+}
+
+th {
+	border-bottom: 0px !important;
+	font-size: large !important;
+}
+
+td {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+	border-top: 0px !important;
+	font-size: medium !important;
+}
+
+tr {
+	background-color: var(--row-background2);
+}
+
+tbody tr {
+	transition: 0.3s;
+	background-color: #E9ECEF;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+}
+
+tbody tr:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+tr td:first-child {
+	width: 5%;
+}
+
+tr td::nth-child(2) {
+	width: 80% !important;
+}
+
+tr td::nth-child(3) {
+	width: 15%;
+}
+
+.first {
+	color: var(--gold-dark);
+	background-color: var(--row-background1);
+}
+
+.first td:first-child {
+	text-align: center;
+	background-color: var(--gold);
+}
+
+.second {
+	color: var(--silver-dark);
+	background-color: var(--row-background1);
+}
+
+.second td:first-child {
+	text-align: center;
+	background-color: var(--silver);
+}
+
+.third {
+	color: var(--bronze-dark);
+	background-color: var(--row-background1);
+}
+
+.third td:first-child {
+	text-align: center;
+	background-color: var(--bronze);
+}
+
+.rest {
+	color: var(--grey-dark);
+	background-color: ;
+}
+
+.rest td:first-child {
+	text-align: center;
+	background-color: var(--grey);
+}
