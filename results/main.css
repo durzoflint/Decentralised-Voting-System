@@ -7,7 +7,6 @@
 	--bronze-dark: #80582c;
 	--grey: #CED4DA;
 	--grey-dark: #868E96;
-
 	--row-background1: #F1F3F5;
 	--row-background2: #E9ECEF;
 }
@@ -21,12 +20,12 @@ body {
 	padding-left: 25vw;
 	height: 100vh;
 	overflow-y: auto;
+	padding-bottom: 10vh;
 }
 
 .result {
 	position: relative; /*Remove this and see how it looks*/
 	margin-top: 10vh;
-	/*background-color: #00897b;*/
 	background-color: white;
 	width: 50vw;
 	border-radius: 5px;
@@ -56,6 +55,7 @@ th {
 }
 
 td {
+	vertical-align: middle !important;
 	padding-top: 20px !important;
 	padding-bottom: 20px !important;
 	border-top: 0px !important;
@@ -87,6 +87,10 @@ tr td::nth-child(2) {
 
 tr td::nth-child(3) {
 	width: 15%;
+}
+
+.table-image {
+	width: 50px;
 }
 
 .first {
