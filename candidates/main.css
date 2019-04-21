@@ -48,6 +48,7 @@
 }
 
 .candidate-info {
+	display: none;
 }
 
 .candidate-name {
