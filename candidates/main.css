@@ -1,5 +1,8 @@
-.home {
+body {
 	background-color: #263238;
+}
+
+.home {
 	padding: 0px;
 	color: white;
 }
