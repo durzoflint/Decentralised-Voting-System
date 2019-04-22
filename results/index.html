@@ -31,48 +31,67 @@
 	</div>
 
 	<div class="container-fluid home">
-		
-	<div class="row result">
-		<h1 class="page-header animated bounce text-center">Election Results</h1>
-		<table class="table">
-			<tbody>
-				<tr class="first">
-					<td>1</td>
-					<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar1.png"></span>&nbsp;&nbsp;&nbsp;This guy came first</td>
-					<td>100 votes</td>
-				</tr>
-				<tr class="second">
-					<td>2</td>
-					<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar2.png"></span>&nbsp;&nbsp;&nbsp;He was second</td>
-					<td>90 votes</td>
-				</tr>
-				<tr class="third">
-					<td>3</td>
-					<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar3.png"></span>&nbsp;&nbsp;&nbsp;He landed third</td>
-					<td>80 votes</td>
-				</tr>
-				<tr class="rest">
-					<td>4</td>
-					<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar4.png"></span>&nbsp;&nbsp;&nbsp;Nobody cares about this guy</td>
-					<td>70 votes</td>
-				</tr>
-				<tr class="rest">
-					<td>5</td>
-					<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar4.png"></span>&nbsp;&nbsp;&nbsp;Nobody cares about this guy</td>
-					<td>60 votes</td>
-				</tr>
-				<tr class="rest">
-					<td>6</td>
-					<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar4.png"></span>&nbsp;&nbsp;&nbsp;Nobody cares about this guy</td>
-					<td>50 votes</td>
-				</tr>
-				<tr class="rest">
-					<td>7</td>
-					<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar5.png"></span>&nbsp;&nbsp;&nbsp;This is the last guy</td>
-					<td>10 votes</td>
-				</tr>
-			</tbody>
-		</table>
+
+		<div id="loader" style="display: none;">
+			<p class="text-center">Loading...</p>
+		</div>
+
+		<div id="content" class="row result" style="display: ;" >
+			<h1 class="page-header animated bounce text-center">Election Results</h1>
+			<a class="btn btn-info btn-lg" style="margin: 40px;" href="../candidates/index.html">Candidate Details</a>
+			<table class="table">
+				<tbody id="candidatesResults">
+					<tr class="first">
+						<td>1</td>
+						<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar1.png"></span>&nbsp;&nbsp;&nbsp;This guy came first</td>
+						<td>100 votes</td>
+					</tr>
+					<tr class="second">
+						<td>2</td>
+						<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar2.png"></span>&nbsp;&nbsp;&nbsp;He was second</td>
+						<td>90 votes</td>
+					</tr>
+					<tr class="third">
+						<td>3</td>
+						<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar3.png"></span>&nbsp;&nbsp;&nbsp;He landed third</td>
+						<td>80 votes</td>
+					</tr>
+					<tr class="rest">
+						<td>4</td>
+						<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar4.png"></span>&nbsp;&nbsp;&nbsp;Nobody cares about this guy</td>
+						<td>70 votes</td>
+					</tr>
+					<tr class="rest">
+						<td>5</td>
+						<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar4.png"></span>&nbsp;&nbsp;&nbsp;Nobody cares about this guy</td>
+						<td>60 votes</td>
+					</tr>
+					<tr class="rest">
+						<td>6</td>
+						<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar4.png"></span>&nbsp;&nbsp;&nbsp;Nobody cares about this guy</td>
+						<td>50 votes</td>
+					</tr>
+					<tr class="rest">
+						<td>7</td>
+						<td><span>&nbsp;&nbsp;&nbsp;<img class="img-circle table-image" src="../res/avatar5.png"></span>&nbsp;&nbsp;&nbsp;This is the last guy</td>
+						<td>10 votes</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div style="margin: 40px;">
+				<form onSubmit="App.castVote(); return false;">
+					<div class="form-group">
+						<label for="candidatesSelect">Select Candidate</label>
+						<select class="form-control" id="candidatesSelect"></select>
+					</div>
+
+					<button type="submit" class="btn btn-primary btn-lg">Vote</button>
+				</form>
+
+	            <p id="accountAddress" class="text-center"></p>
+			</div>
+
 	</div>
 	</div>
 
